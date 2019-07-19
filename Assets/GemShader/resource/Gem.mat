@@ -4,8 +4,9 @@
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
   m_Name: Gem
   m_Shader: {fileID: 4800000, guid: e8333f7e165fa4e44ab4f9d4c18e0eec, type: 3}
   m_ShaderKeywords: 
@@ -30,5 +31,5 @@ Material:
     - _Spectrum: 2
     - _Wavelength: 589.3
     m_Colors:
-    - _Color: {r: 1.3, g: 1.3, b: 1.3, a: 1}
+    - _Color: {r: 2.6082377, g: 2.6082377, b: 2.6082377, a: 1}
     - _MatcapColor: {r: 1, g: 1, b: 1, a: 0}
