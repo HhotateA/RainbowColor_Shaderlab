@@ -123,18 +123,26 @@
 
                 float _Wave;
 
-                struct v2f {
-                    float4 vertex : SV_POSITION;
+                struct appdata {
+                    float4 vertex : POSITION;
+                    float2 uv : TEXCOORD;
                 };
 
-                v2f vert (float4 vertex : POSITION) {
+                struct v2f {
+                    float4 vertex : SV_POSITION;
+                    float2 uv : TEXCOORD;
+                };
+
+                v2f vert (appdata IN) {
                     v2f output;
-                    output.vertex = UnityObjectToClipPos(vertex);
+                    output.vertex = UnityObjectToClipPos(IN.vertex);
+                    output.uv = IN.uv;
                     return output;
                 }
 
                 fixed4 frag(v2f IN) : SV_Target {
-                    return Wave2RGB(_Wave);
+                    //return Wave2RGB(_Wave);
+                    return Val2RGB(IN.uv.x);
                 }
             ENDCG
         }
